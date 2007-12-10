@@ -1,0 +1,17 @@
+#!/bin/bash
+
+ID=`which id`
+
+# make sure we're running under root
+if [ `$ID -u` -ne 0 ]; then
+    echo "ERROR: This script requires root privileges to run."
+    exit -1
+fi
+
+echo "Installing backup script..."
+mkdir -p /usr/local/bin
+cp ./backup /usr/local/bin/
+cp ./excludes /var/root/
+cp ./*.plist /Library/LaunchDaemons/
+launchctl load /Library/LaunchDaemons/com.sudarkoff.backup.*.plist
+echo "Done."
