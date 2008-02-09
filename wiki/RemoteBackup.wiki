@@ -1,3 +1,16 @@
 #summary Remote backup script.
 
 = Remote Backup =
+
+== Installation ==
+
+First, you need to enable root account on your Mac:
+
+{{{
+$ sudo passwd root
+Changing password for root.
+New password: ********
+Retype new password: ********
+}}}
+
+To be continued...
