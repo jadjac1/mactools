@@ -3,24 +3,28 @@
 <plist version="1.0">
 <dict>
 	<key>Label</key>
-	<string>com.sudarkoff.backup.daily</string>
+	<string>com.sudarkoff.backup.monthly</string>
 	<key>LowPriorityIO</key>
 	<true/>
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/bin/backup</string>
 		<string>-h</string>
-		<string>CHANGEME.rsync.net</string>
+		<string>@@HOSTNAME@@</string>
 		<string>-u</string>
-		<string>CHANGEME</string>
+		<string>@@USERNAME@@</string>
+		<string>-l</string>
+		<string>monthly</string>
 		<string>/Users</string>
 		<string>/Library/Preferences</string>
 		<string>/var/root</string>
 	</array>
 	<key>StartCalendarInterval</key>
 	<dict>
+		<key>Day</key>
+		<integer>1</integer>
 		<key>Hour</key>
-		<integer>4</integer>
+		<integer>6</integer>
 	</dict>
 	<key>UserName</key>
 	<string>root</string>
