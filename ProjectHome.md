@@ -1,0 +1,1 @@
+This is a collection of small tools that I wrote to simplify and/or automate routine tasks. The tools include remote backup script, a handful of bash and AppleScripts, a few Automator workflows and so on. (Presently, only the backup script is in the repository.)
